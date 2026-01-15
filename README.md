@@ -140,28 +140,28 @@ Gmail API returns email bodies in complex nested `multipart/*` structures with B
 ## 🛑 Limitations
 
 - **Local State Dependency**
-- `processed_emails.json` is stored locally.
-- Migrating the script to another machine or container without this file resets processing history.
+-     `processed_emails.json` is stored locally.
+-     Migrating the script to another machine or container without this file resets processing history.
 
 - **Plain Text Focus**
-- HTML tags are stripped for Google Sheets readability.
-- HTML-heavy emails (e.g., newsletters) may lose formatting.
+-     HTML tags are stripped for Google Sheets readability.
+-     HTML-heavy emails (e.g., newsletters) may lose formatting.
 
 - **No Attachment Support**
-- Attachments are ignored.
-- Only textual email content is processed.
+-     Attachments are ignored.
+-     Only textual email content is processed.
 
 ---
 
 ## 🚀 Bonus Features Implemented
 
 - **HTML → Plain Text Conversion**
-- Prioritizes `text/plain` MIME parts.
-- Falls back to HTML parsing with tag stripping when required.
+-     Prioritizes `text/plain` MIME parts.
+-     Falls back to HTML parsing with tag stripping when required.
 
 - **Structured Logging**
-- Uses Python’s `logging` module with timestamps:
-  ```
-  %(asctime)s - %(levelname)s - %(message)s
-  ```
-- Replaces basic `print` statements for professional debugging and auditability.
+-     Uses Python’s `logging` module with timestamps:
+      ```
+      %(asctime)s - %(levelname)s - %(message)s
+      ```
+-     Replaces basic `print` statements for professional debugging and auditability.
