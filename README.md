@@ -17,7 +17,7 @@ The system follows a modular ETL (Extract, Transform, Load) pattern:
 3.  **Load:** `sheets_service.py` appends the cleaned data to the specified Google Sheet.
 4.  **State Management:** A local JSON file tracks processed IDs to ensure idempotency.
 
-![Architecture Diagram]<img width="1065" height="1280" alt="image" src="https://github.com/user-attachments/assets/b1250eb1-d517-4b44-a829-e7491cbd089c" />
+[Architecture Diagram]<img width="1065" height="1280" alt="image" src="https://github.com/user-attachments/assets/b1250eb1-d517-4b44-a829-e7491cbd089c" />
 
 
 ---
