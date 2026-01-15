@@ -5,6 +5,7 @@ A Python-based automation tool that reads real incoming emails from a Gmail inbo
 
 **Author:** Sahil Deore
 **Repository:** [https://github.com/Sahildk/gmail-to-sheets](https://github.com/Sahildk/gmail-to-sheets)
+
 **Submission Date:** 15-01-2026
 
 ---
