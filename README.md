@@ -3,13 +3,13 @@
 ## 📌 Project Overview
 A Python-based automation tool that reads real incoming emails from a Gmail inbox, parses key details (Sender, Subject, Date, Body), and logs them into a Google Sheet. This system uses OAuth 2.0 for secure authentication and implements state management to prevent duplicate entries.
 
-**Author:** Sahil Sawata Deore  
-**Repository:** [https://github.com/Sahildk/gmail-to-sheets](https://github.com/Sahildk/gmail-to-sheets)  
+**Author:** Sahil Deore
+**Repository:** [https://github.com/Sahildk/gmail-to-sheets](https://github.com/Sahildk/gmail-to-sheets)
 **Submission Date:** 15-01-2026
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ High-Level Architecture
 The system follows a modular ETL (Extract, Transform, Load) pattern:
 
 1.  **Extract:** `gmail_service.py` connects to Gmail API to fetch message IDs labeled `UNREAD`.
@@ -17,15 +17,17 @@ The system follows a modular ETL (Extract, Transform, Load) pattern:
 3.  **Load:** `sheets_service.py` appends the cleaned data to the specified Google Sheet.
 4.  **State Management:** A local JSON file tracks processed IDs to ensure idempotency.
 
-*(See `proof/` folder for the architecture diagram.)*
+![Architecture Diagram](<img width="1065" height="1280" alt="image" src="https://github.com/user-attachments/assets/d86035ee-23e1-4ecc-ad1d-482c988192d5" />
+)
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Step-by-Step Setup Instructions
+
 
 ### 1. Prerequisites
-* Python 3.x
-* A Google Cloud Project with Gmail and Sheets APIs enabled.
+* Python 3.x installed.
+* A Google Cloud Project with **Gmail API** and **Google Sheets API** enabled.
 
 ### 2. Installation
 1.  Clone the repository:
@@ -38,10 +40,13 @@ The system follows a modular ETL (Extract, Transform, Load) pattern:
     pip install -r requirements.txt
     ```
 3.  **Credentials Setup:**
-    * Place your `credentials.json` (OAuth 2.0 Client ID) inside the `credentials/` folder.
+    * Download your OAuth 2.0 Client ID JSON from Google Cloud Console.
+    * Rename it to `credentials.json`.
+    * Place it inside the `credentials/` folder.
     * *Note: This file is git-ignored for security.*
 4.  **Configuration:**
-    * Open `config.py` and add your `SPREADSHEET_ID`.
+    * Open `config.py`.
+    * Update `SPREADSHEET_ID` with the ID from your target Google Sheet URL.
 
 ### 3. Running the Script
 ```bash
